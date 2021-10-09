@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<flow name="AddemployeeFlow" doc:id="e994b3f7-998d-4edb-8c54-cb22bff3dbbf" >
+		<db:insert doc:name="Insert" doc:id="5913c83c-a2de-4acb-ba13-d4e0b546c2b7" config-ref="Database_Config">
+			<db:sql ><![CDATA[insert into bankemployee values
+(:name,:empid,:dept,:city,:phonenum)]]></db:sql>
+			<db:input-parameters ><![CDATA[#[{
+ 
+ 'empid': payload.Empid,
+ 'dept': payload.Dept,
+ 'city': payload.City,
+ 'phonenum': payload.Phone
+ 
+ 
+}]]]></db:input-parameters>
+		</db:insert>
+	</flow>
+</mule>

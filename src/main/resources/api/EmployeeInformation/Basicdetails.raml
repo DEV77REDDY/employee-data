@@ -1,0 +1,38 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  Name:
+    type: string
+    minLength: 02
+    maxLength: 40
+    example: "Devreddy"
+  Empid:
+    type: string
+    minLength: 05
+    maxLength: 05
+    example: "12345"
+  Dept:
+    enum:
+      - Mule
+      - Java
+      - Dotnet
+      - Banking
+      - Oracle
+  Org:
+    type: string
+    minLength: 04
+    maxLength: 30
+    example: "ICICI"
+  City:
+    type: string
+    minLength: 03
+    maxLength: 20
+    example: "HYD"
+  Phone:
+    type: string
+    minLength: 10
+    maxLength: 10
+    example: "9700046176"  
+
+
+  

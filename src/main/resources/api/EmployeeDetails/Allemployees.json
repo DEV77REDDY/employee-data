@@ -1,0 +1,19 @@
+[
+  {
+"Name": "Devreddy",
+"Empid": "12345",
+"Dept": "BANKING",
+"Org": "ICICI",
+"City": "HYD",
+"Phone": "9700046176"
+},
+{
+"Name": "Kompelly devendar reddy",
+"Empid": "67890",
+"Dept": "SOFTWARE",
+"Org": "CAPGEMINI",
+"City": "BNGLR",
+"Phone": "8790404804"
+}
+
+]
